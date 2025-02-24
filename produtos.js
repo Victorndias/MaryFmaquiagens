@@ -15,7 +15,7 @@ const produtos = [
       nome: "Rímel", 
       preco: 10, 
       imagem: "produto2.jpeg", 
-      descricao: "Máscara de cílios resistente à água que realça seus olhos com volume e definição." 
+      descricao: "Máscara de cílios extra volume que realça seus olhos com volume e definição." 
     },
     { 
       nome: "Água Micelar", 
@@ -27,13 +27,13 @@ const produtos = [
       nome: "Batom", 
       preco: 15, 
       imagem: "batom.jpeg", 
-      descricao: "Batom de longa duração com cores vibrantes e acabamento aveludado." 
+      descricao: "Batom de longa duração com cores vibrantes." 
     },
     { 
       nome: "Sabonete", 
       preco: 15, 
       imagem: "sabonete.jpeg", 
-      descricao: "Sabonete hidratante para limpeza facial, enriquecido com extratos naturais." 
+      descricao: "Sabonete para limpeza facial, enriquecido com vitamina C." 
     },
     { 
       nome: "Sérum", 
@@ -74,13 +74,13 @@ const produtos = [
     { 
       nome: "Escova de Silicone", 
       preco: 4, 
-      imagem: "esponjapo.jpeg", 
+      imagem: "escovasilicone.jpeg", 
       descricao: "Delineador prático e preciso para um look marcante e bem definido." 
     },
     { 
       nome: "Esponja para Pó", 
       preco: 12, 
-      imagem: "escovasilicone.jpeg", 
+      imagem: "esponjapo.jpeg", 
       descricao: "Delineador prático e preciso para um look marcante e bem definido." 
     },
     { 
@@ -104,13 +104,37 @@ const produtos = [
     { 
       nome: "Primer Facil", 
       preco: 16, 
-      imagem: "primerfacil.jpeg", 
+      imagem: "primerfacial.jpeg", 
       descricao: "Delineador prático e preciso para um look marcante e bem definido." 
     },
     { 
       nome: "Serum Clareador", 
       preco: 14, 
       imagem: "serumclareador.jpeg", 
+      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+    },
+    { 
+      nome: "Lip Gloss", 
+      preco: 15, 
+      imagem: "lipgloss.jpeg", 
+      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+    },
+    { 
+      nome: "Cilios", 
+      preco: 10, 
+      imagem: "cilios.jpeg", 
+      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+    },
+    { 
+      nome: "Serum Rosa Mosqueta", 
+      preco: 15, 
+      imagem: "serumrosa.jpeg", 
+      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+    },
+    { 
+      nome: "torre de pigmento neon", 
+      preco: 12, 
+      imagem: "torre.jpeg", 
       descricao: "Delineador prático e preciso para um look marcante e bem definido." 
     }
   ];
@@ -138,7 +162,7 @@ const produtos = [
   
       produtosFiltrados.slice(0, limite).forEach(produto => {
           const produtoHTML = `
-              <div class="bg-purple-300 p-4 rounded-lg shadow hover:scale-105 transition-transform">
+              <div class="bg-[#ccac8e] p-4 rounded-lg shadow hover:scale-105 transition-transform">
                   <img src="${produto.imagem}" alt="${produto.nome}" class="w-full h-64 object-contain rounded">
                   <h2 class="text-lg font-bold mt-2">${produto.nome}</h2>
                   <p class="text-gray-600">R$ ${produto.preco.toFixed(2)}</p>
@@ -158,7 +182,7 @@ const produtos = [
                       </button>
                       <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-800 flex items-center gap-2"
                           onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">
-                          <img src="imagens/icones/carrinho.png" alt="Carrinho" class="w-6 h-6">+
+                          <img src="carrinho.png" alt="Carrinho" class="w-6 h-6">+
                       </button>
                   </div>
               </div>
